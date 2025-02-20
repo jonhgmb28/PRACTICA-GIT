@@ -50,8 +50,9 @@ def main():
             m = float(input('Ingrese otro número: '))
             print(get_multy(n, m))
         elif opcion == '4':
-
-            print("Aquí iría la lógica de la división.")
+            n = float(input('Ingrese un número: '))
+            m = float(input('Ingrese otro número: '))
+            print(division(n, m))
         elif opcion == '5':
             n = float(input('Ingrese un número: '))
             print(get_sqrt(n))
