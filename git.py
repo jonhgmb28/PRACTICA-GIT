@@ -1,9 +1,11 @@
 from root_square import get_sqrt
 from multiply import get_multy
 
-def menu():
+def resta(a, b):
+    return a - b
 
-    print("Bienvenido selecciona la operación que deseas realizar:")
+def menu():
+    print("Bienvenido, selecciona la operación que deseas realizar:")
     print("1. Suma")
     print("2. Resta")
     print("3. Multiplicación")
@@ -21,18 +23,20 @@ def main():
             break        
 
         if opcion == '1':
-                print("Aquí iría la lógica de la suma.")
+            print("Aquí iría la lógica de la suma.")
         elif opcion == '2':
-                print("Aquí iría la lógica de la resta.")
+            n = float(input('Ingrese un número: '))
+            m = float(input('Ingrese otro número: '))
+            print(resta(n, m))  # Se usa la función de resta definida en el mismo archivo
         elif opcion == '3':
-                n = (float(input('Ingrese un número: ')))
-                m = (float(input('Ingrese otro número: ')))
-                print(get_multy(n, m))
+            n = float(input('Ingrese un número: '))
+            m = float(input('Ingrese otro número: '))
+            print(get_multy(n, m))
         elif opcion == '4':
-                print("Aquí iría la lógica de la división.")
+            print("Aquí iría la lógica de la división.")
         elif opcion == '5':
-                n = float(input('Ingrese un número'))
-                print(get_sqrt(n))
+            n = float(input('Ingrese un número: '))
+            print(get_sqrt(n))
         else:
             print("Opción no válida. Por favor, selecciona una opción del 1 al 6.")
 
