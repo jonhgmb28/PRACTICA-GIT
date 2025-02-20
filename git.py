@@ -1,10 +1,21 @@
+from root_square import get_sqrt
+from multiply import get_multy
+
+def resta(a, b):
+    return a - b
+
+def division(a, b):
+    if b == 0:
+        return "Error: No se puede dividir entre cero."
+    return a / b
+
 def menu():
-    print("Bienvenido selecciona la operación que deseas realizar:")
+    print("Bienvenido, selecciona la operación que deseas realizar:")
     print("1. Suma")
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
-    print("5. Potencia")
+    print("5. Raíz cuadrada")
     print("6. Salir")
 
 def main():
@@ -14,27 +25,25 @@ def main():
 
         if opcion == '6':
             print("Saliendo de la calculadora...")
-            break
+            break        
 
         if opcion == '1':
             print("Aquí iría la lógica de la suma.")
         elif opcion == '2':
-            print("Aquí iría la lógica de la resta.")
+            n = float(input('Ingrese un número: '))
+            m = float(input('Ingrese otro número: '))
+            print(resta(n, m))
         elif opcion == '3':
-            print("Aquí iría la lógica de la multiplicación.")
+            n = float(input('Ingrese un número: '))
+            m = float(input('Ingrese otro número: '))
+            print(get_multy(n, m))
         elif opcion == '4':
-            try:
-                num1 = float(input("Ingresa el primer número: "))
-                num2 = float(input("Ingresa el segundo número: "))
-                if num2 == 0:
-                    print("Error: No se puede dividir entre cero.")
-                else:
-                    resultado = num1 / num2
-                    print(f"El resultado de la división es: {resultado}")
-            except ValueError:
-                print("Error: Ingresa valores numéricos válidos.")
+            n = float(input('Ingrese un número: '))
+            m = float(input('Ingrese otro número: '))
+            print(division(n, m))
         elif opcion == '5':
-            print("Aquí iría la lógica de la potencia.")
+            n = float(input('Ingrese un número: '))
+            print(get_sqrt(n))
         else:
             print("Opción no válida. Por favor, selecciona una opción del 1 al 6.")
 
