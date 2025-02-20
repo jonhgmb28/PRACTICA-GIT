@@ -1,3 +1,5 @@
+from root_square import get_sqrt
+
 def menu():
 
     print("Bienvenido selecciona la operación que deseas realizar:")
@@ -5,7 +7,7 @@ def menu():
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
-    print("5. Potencia")
+    print("5. Raíz cuadrada")
     print("6. Salir")
 
 def main():
@@ -28,7 +30,8 @@ def main():
         elif opcion == '4':
                 print("Aquí iría la lógica de la división.")
         elif opcion == '5':
-                print("Aquí iría la lógica de la potencia.")
+                n = float(input('Ingrese un número'))
+                print(get_sqrt(n))
         else:
             print("Opción no válida. Por favor, selecciona una opción del 1 al 6.")
 
