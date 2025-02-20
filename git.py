@@ -1,5 +1,10 @@
 
 from root_square import get_sqrt
+
+def menu():
+
+
+from root_square import get_sqrt
 from multiply import get_multy
 
 def resta(a, b):
@@ -66,8 +71,13 @@ def main():
             m = float(input('Ingrese otro número: '))
             print(division(n, m))
         elif opcion == '5':
+
+                n = float(input('Ingrese un número'))
+                print(get_sqrt(n))
+
             n = float(input('Ingrese un número: '))
             print(get_sqrt(n))
+
 
         else:
             print("Opción no válida. Por favor, selecciona una opción del 1 al 6.")
