@@ -1,7 +1,10 @@
 
 from root_square import get_sqrt
+from multiply import get_multy
 
-def menu():
+def resta(a, b):
+    return a - b
+
 
 
 from root_square import get_sqrt
@@ -14,6 +17,7 @@ def division(a, b):
     if b == 0:
         return "Error: No se puede dividir entre cero."
     return a / b
+
 
 
 def menu():
@@ -42,6 +46,7 @@ def main():
         if opcion == '6':
             print("Saliendo de la calculadora...")
 
+
             break
         elif opcion == '1':
             suma()
@@ -61,12 +66,21 @@ def main():
         elif opcion == '2':
             n = float(input('Ingrese un número: '))
             m = float(input('Ingrese otro número: '))
+
+            print(resta(n, m))  # Se usa la función de resta definida en el mismo archivo
             print(resta(n, m))
+
         elif opcion == '3':
             n = float(input('Ingrese un número: '))
             m = float(input('Ingrese otro número: '))
             print(get_multy(n, m))
         elif opcion == '4':
+
+            print("Aquí iría la lógica de la división.")
+        elif opcion == '5':
+            n = float(input('Ingrese un número: '))
+            print(get_sqrt(n))
+
             n = float(input('Ingrese un número: '))
             m = float(input('Ingrese otro número: '))
             print(division(n, m))
@@ -77,6 +91,7 @@ def main():
 
             n = float(input('Ingrese un número: '))
             print(get_sqrt(n))
+
 
 
         else:
