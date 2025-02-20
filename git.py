@@ -1,4 +1,5 @@
 from root_square import get_sqrt
+from multiply import get_multy
 
 def menu():
 
@@ -17,16 +18,16 @@ def main():
 
         if opcion == '6':
             print("Saliendo de la calculadora...")
-            break
-
-        
+            break        
 
         if opcion == '1':
                 print("Aquí iría la lógica de la suma.")
         elif opcion == '2':
                 print("Aquí iría la lógica de la resta.")
         elif opcion == '3':
-                print("Aquí iría la lógica de la multiplicación.")
+                n = (float(input('Ingrese un número: ')))
+                m = (float(input('Ingrese otro número: ')))
+                print(get_multy(n, m))
         elif opcion == '4':
                 print("Aquí iría la lógica de la división.")
         elif opcion == '5':
