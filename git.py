@@ -6,13 +6,6 @@ def resta(a, b):
     return a - b
 
 
-
-from root_square import get_sqrt
-from multiply import get_multy
-
-def resta(a, b):
-    return a - b
-
 def division(a, b):
     if b == 0:
         return "Error: No se puede dividir entre cero."
@@ -41,25 +34,7 @@ def suma():
 def main():
     while True:
         menu()
-        opcion = input("Ingresa el número de la operación que deseas realizar: ")
-
-        if opcion == '6':
-            print("Saliendo de la calculadora...")
-
-
-            break
-        elif opcion == '1':
-            suma()
-        elif opcion == '2':
-            print("Aquí iría la lógica de la resta.")
-        elif opcion == '3':
-            print("Aquí iría la lógica de la multiplicación.")
-        elif opcion == '4':
-            print("Aquí iría la lógica de la división.")
-        elif opcion == '5':
-            print("Aquí iría la lógica de la potencia.")
-
-            break        
+        opcion = input("Ingresa el número de la operación que deseas realizar: ")       
 
         if opcion == '1':
             print("Aquí iría la lógica de la suma.")
@@ -84,13 +59,7 @@ def main():
             n = float(input('Ingrese un número: '))
             m = float(input('Ingrese otro número: '))
             print(division(n, m))
-        elif opcion == '5':
-
-                n = float(input('Ingrese un número'))
-                print(get_sqrt(n))
-
-            n = float(input('Ingrese un número: '))
-            print(get_sqrt(n))
+       
 
 
 
